@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rematrícula Escolar</title>
+    <link rel="shortcut icon" href="cadastro.ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estudante.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h2>Rematrícula Escolar</h2>
+        <form action="processar_rematricula.php" method="post">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+            <label for="serie">Série:</label>
+            <select id="serie" name="serie" required>
+                <option value="">Selecione a série</option>
+                <option value="1">1º Ano</option>
+                <option value="2">2º Ano</option>
+                <option value="3">3º Ano</option>
+                <option value="4">4º Ano</option>
+                <option value="5">5º Ano</option>
+                <option value="6">6º Ano</option>
+                <option value="7">7º Ano</option>
+                <option value="8">8º Ano</option>
+                <option value="9">9º Ano</option>
+            </select>
+
+            <label for="escola">Nome da Escola:</label>
+            <input type="text" id="escola" name="escola" required>
+
+            <div class="button-container">
+                <button type="submit" class="btn-enviar">Enviar Rematrícula</button>
+                <button type="button" class="btn-voltar" onclick="voltarInicio()">Voltar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function voltarInicio() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+
+</body>
+</html>
+

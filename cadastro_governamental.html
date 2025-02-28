@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Social</title>
+    <link rel="shortcut icon" href="cadastro.ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="gov.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cadastro para Programas Sociais</h2>
+        <form action="#" method="POST">
+            
+            <h3>Informações Pessoais</h3>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <h3>Contato e Endereço</h3>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <h3>Situação Socioeconômica</h3>
+            <label for="renda">Renda Mensal Familiar:</label>
+            <input type="number" id="renda" name="renda" required>
+
+            <label for="emprego">Possui emprego formal?</label>
+            <select id="emprego" name="emprego">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="beneficios">Recebe algum benefício do governo?</label>
+            <select id="beneficios" name="beneficios">
+                <option value="Nenhum">Nenhum</option>
+                <option value="Bolsa Família">Bolsa Família</option>
+                <option value="BPC">BPC</option>
+                <option value="Auxílio Gás">Auxílio Gás</option>
+            </select>
+
+            <h3>Programas de Interesse</h3>
+            <label for="programas">Selecione os programas que deseja acessar:</label>
+            <select id="programas" name="programas" multiple>
+                <option value="Bolsa Família">Bolsa Família</option>
+                <option value="Minha Casa Minha Vida">Minha Casa Minha Vida</option>
+                <option value="Auxílio Brasil">Auxílio Brasil</option>
+                <option value="Auxílio Gás">Auxílio Gás</option>
+            </select>
+
+            <h3 style="text-align: center;">Termos e Condições</h3>
+            <input type="checkbox" id="termos" name="termos" required> Aceito os termos e condições!
+            <label for="termos">Declaro que as informações prestadas são verdadeiras.</label>
+
+            <div class="button-container">
+                <button type="submit" class="btn-enviar">Cadastrar</button>
+                <button type="button" class="btn-voltar" onclick="voltarInicio()">Voltar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function voltarInicio() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
+
